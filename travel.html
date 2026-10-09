@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel with MOhsin</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&family=Alfa+Slab+One&family=Baloo+Bhai+2:wght@400..800&family=Honk:MORF@15&family=Isometra&family=Kumar+One&family=Matemasie&family=Mea+Culpa&family=Micro+5+Charted&family=Original+Surfer&family=Playwrite+CU+Guides&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&family=Alfa+Slab+One&family=Baloo+Bhai+2:wght@400..800&family=Bitcount+Ink:wght@100..900&family=Honk:MORF@15&family=Isometra&family=Kumar+One&family=Matemasie&family=Mea+Culpa&family=Micro+5+Charted&family=Original+Surfer&family=Playwrite+CU+Guides&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&family=Alfa+Slab+One&family=Anton&family=Baloo+Bhai+2:wght@400..800&family=Bitcount+Ink:wght@100..900&family=Honk:MORF@15&family=Isometra&family=Kumar+One&family=Matemasie&family=Mea+Culpa&family=Micro+5+Charted&family=Original+Surfer&family=Playwrite+CU+Guides&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&family=Alfa+Slab+One&family=Anton&family=Baloo+Bhai+2:wght@400..800&family=Bitcount+Ink:wght@100..900&family=Bungee+Spice&family=Honk:MORF@15&family=Isometra&family=Kumar+One&family=Matemasie&family=Mea+Culpa&family=Micro+5+Charted&family=Original+Surfer&family=Playwrite+CU+Guides&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+    .gallery {
+        display: flex;
+        gap: 1px;
+        flex-wrap: wrap;
+    }
+
+    .gallery img {
+        width: 30%;
+        height: 200px;
+        object-fit: cover;
+        border: 2px solid rgb(237, 175, 84);
+        box-sizing: border-box;
+    }
+
+    nav {
+        display: flex;
+        gap: 250px;
+        box-sizing: border-box;
+        padding: 20px;
+        background-color: rgb(236, 167, 7);
+        box-shadow: 3px 15px 5px rgb(55, 53, 43);
+        list-style-type: square;
+        /* padding-top: 0px; */
+        margin-top: 0px;
+
+
+    }
+
+    #but>h1 {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        text-decoration: underline;
+        color: rgb(11, 10, 2);
+        text-decoration-thickness: 5px;
+
+    }
+
+    #but>p {
+        display: inline-block;
+        font-family: 'Times New Roman', Times, serif;
+        color: rgb(11, 9, 9);
+        font-weight: 20px;
+        box-sizing: border-box;
+        box-shadow: 3px 5px 5px red;
+    }
+
+    button {
+        /* text-align: center; */
+        display: block;
+        background-color: rgb(231, 231, 238);
+        margin: 20px;
+        padding: 20px;
+        text-align: center;
+
+    }
+
+    #id {
+        gap: 300px;
+        display: flex;
+    }
+
+    #des {
+        font-family: "Isometra", serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    #ph {
+        box-sizing: border-box;
+        text-align: justify;
+        box-shadow: 3px 12px 11px gray;
+    }
+
+    #hun {
+        font-family: "Bitcount Ink", system-ui;
+        font-optical-sizing: auto;
+        font-weight: <weight>;
+        font-style: normal;
+        font-variation-settings:
+            "slnt" 0,
+            "CRSV" 0.5,
+            "ELSH" 0,
+            "ELXP" 0,
+            "SZP1" 0,
+            "SZP2" 0,
+            "XPN1" 0,
+            "XPN2" 0,
+            "YPN1" 0,
+            "YPN2" 0;
+        /* width: 12px; */
+        /* padding: 20px; */
+    }
+
+    .button {
+        display: block;
+        text-align: right;
+        margin: 0 auto;
+        text-decoration: underline;
+        color: black;
+
+
+    }
+
+    .button:hover {
+        background-color: rgb(157, 157, 148);
+        cursor: pointer;
+    }
+
+    #sk {
+        font-size: 30px;
+        font-family: "Anton", sans-serif;
+        /* font-weight: 600px; */
+        font-style: normal;
+    }
+
+    #skr {
+        box-sizing: border-box;
+        border: 2px solid green;
+        box-shadow: 2px 4px 5px gray;
+
+    }
+
+    #id {
+        font-family: "Bungee Spice", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    table {
+        box-shadow: 2px 10px 8px rgb(227, 111, 10);
+    }
+
+    th {
+        border: 2px solid black;
+
+    }
+
+    td {
+        border: 2px solid black;
+    }
+
+    #tr {
+        box-sizing: border-box;
+        box-shadow: 3px 3px 2px black;
+        display: inline-block;
+    }
+
+    ul {
+        list-style-type: square;
+    }
+
+    #paki {
+        overflow: auto;
+        white-space: nowrap;
+    }
+
+
+    #name {
+        display: inline-block;
+        color: rgb(14, 15, 14);
+        box-shadow: 3px 3px 1px rgb(36, 5, 41);
+        ;
+    }
+
+    #email {
+        display: inline-block;
+        color: rgb(14, 15, 14);
+        box-shadow: 3px 3px 1px rgb(36, 5, 41);
+        ;
+    }
+
+    #phone {
+        display: inline-block;
+        color: rgb(14, 15, 14);
+        box-shadow: 3px 3px 1px rgb(36, 5, 41);
+        ;
+    }
+
+    #lov {
+        box-sizing: border-box;
+        border-radius: 20px;
+        border: 2px solid rgb(21, 20, 20);
+    }
+
+    body {
+        background-color: rgb(225, 221, 222);
+    }
+</style>
+
+<body>
+    <nav>
+        <li>Home</li>
+
+        <li>package</li>
+
+        <li>Destination</li>
+
+        <li>Gallery</li>
+
+        <li>Contect</li>
+
+    </nav>
+    <div id=but>
+        <h1>
+            Explore the Beauty of the pakistan
+        </h1>
+        <p>
+            pakistan is a well gromed and highly visted contries out all of the world.
+        </p>
+    </div>
+    <button class="button">
+        Explore Destination
+    </button>
+    <br>
+    <img src="p.jpg" id=img>
+    <h2 id=des>
+        Popular Destinations
+    </h2>
+    <p>
+        Discover the most beautiful places in Pakistan, from the peaceful valleys of Hunza and Swat to the breathtaking
+        mountains of Skardu and Naran Kaghan.
+    </p>
+
+    <img src="m2.jpg">
+    <h3 id=hun>
+        Hunza
+    </h3>
+    <p id=ph>
+        Hunza is one of the most beautiful and popular tourist destinations in northern Pakistan. It is surrounded by
+        magnificent mountains, peaceful valleys, clear rivers, and breathtaking natural scenery. The region is famous
+        for its stunning landscapes, fresh air, traditional villages, and rich cultural heritage. Visitors can enjoy
+        beautiful views of the mountains, explore local markets, discover historic forts, and experience the simple
+        lifestyle of the local people.
+
+        Hunza is also a wonderful destination for nature lovers, photographers, adventure seekers, and families. Famous
+        places such as Altit Fort, Baltit Fort, Attabad Lake, and Passu provide unforgettable experiences for travelers.
+        During different seasons, Hunza offers a unique view of nature. In spring, colorful flowers make the valley look
+        beautiful, while autumn brings golden and colorful trees across the mountains.
+
+        The peaceful environment and spectacular scenery make Hunza a perfect place to relax and escape from busy city
+        life. Whether you want to explore nature, learn about local culture, take memorable photographs, or simply enjoy
+        the peaceful atmosphere, Hunza offers an unforgettable travel experience for everyone.
+    </p>
+    <button class="button">
+        Explore More
+    </button>
+    <img src="3.jpg">
+    <h3 id=sk>
+        Skardu
+    </h3>
+    <p id=skr>
+        Skardu is a breathtaking destination in northern Pakistan, surrounded by majestic mountains, beautiful lakes,
+        peaceful valleys, and stunning landscapes. It is famous for places like Shangrila Resort, Upper Kachura Lake,
+        Deosai Plains, and the magnificent Satpara Lake. Skardu is a perfect destination for nature lovers, adventure
+        seekers, photographers, and travelers looking for peaceful and unforgettable experiences.
+    </p>
+    <button class="button">
+        Explore More
+    </button>
+    <img src="n.jpg">
+    <h3>
+        Naran Kaghan
+    </h3>
+    <p>
+        Naran Kaghan is one of the most beautiful and popular tourist destinations in northern Pakistan. Located in the
+        Kaghan Valley of Khyber Pakhtunkhwa, the region is famous for its breathtaking mountains, green valleys, flowing
+        rivers, peaceful lakes, and pleasant weather. Every year, thousands of visitors travel to Naran Kaghan to enjoy
+        its natural beauty and peaceful environment.
+
+        One of the most famous attractions in the area is Lake Saif-ul-Malook. Surrounded by tall mountains, the lake
+        offers spectacular views and is considered one of the most beautiful lakes in Pakistan. Visitors can enjoy the
+        peaceful atmosphere, take photographs, and admire the reflection of the surrounding mountains in the clear
+        water. The lake is especially attractive during the summer season when the roads are accessible and the weather
+        is pleasant.
+
+        The Kaghan Valley also offers many other beautiful places to explore. Babusar Top is another popular attraction
+        that provides incredible views of mountains and valleys. The journey toward Babusar Top is itself an enjoyable
+        experience because travelers can see green landscapes, rivers, waterfalls, and snow-covered peaks along the way.
+        The Kunhar River also flows through the valley and adds to the natural beauty of the region.
+    </p>
+    <button class="button">
+        Explore More
+    </button>
+
+    <h2 id=id>
+        Travel Package
+    </h2>
+    <table id=table>
+        <tr>
+            <th>
+                Destination
+            </th>
+            <th>
+                Days
+            </th>
+            <th>
+                Hotel
+            </th>
+            <th>
+                Transport
+            </th>
+            <th>
+                Price
+            </th>
+        </tr>
+        <tr>
+            <td>
+                Honza
+            </td>
+            <td>
+                4
+            </td>
+            <td>
+                Mountain view Hotel
+            </td>
+            <td>
+                Coaster
+            </td>
+            <td>
+                Rs.250,00
+            </td>
+        <tr>
+            <td>
+                Skardu
+            </td>
+            <td>
+                5
+            </td>
+            <td>
+                Sakrdu heights
+            </td>
+            <td>
+                Coaster
+            </td>
+            <td>
+                Rs.32,00
+            </td>
+        <tr>
+            <td>
+                Sawat
+            </td>
+            <td>
+                6
+            </td>
+            <td>
+                sweet palace Hotel
+            </td>
+            <td>
+                Bus
+            </td>
+            <td>
+                Rs.20,00
+            </td>
+        <tr>
+            <td>
+                Naran Kaghan
+            </td>
+            <td>
+                4
+            </td>
+            <td>
+                Naran Hotel
+            </td>
+            <td>
+                Coaster
+            </td>
+            <td>
+                Rs.100,00
+            </td>
+    </table>
+    <h2 id=tr>
+        Travel Tips
+    </h2>
+    <h3>
+        What to Pack
+    </h3>
+    <ul>
+        <li>Warm Clothes </li>
+        <li>Comfort shoes </li>
+        <li>Sunglasses</li>
+        <li>Water Bottle </li>
+        <li>First Aid Kit </li>
+
+    </ul>
+    <h3>
+        Safty Tips
+    </h3>
+    <ul>
+        <li>Check the weather before traveling.</li>
+        <li>Keep important documents safe.</li>
+        <li>Follow local travel instructions.</li>
+        <li>Avoid risky areas during bad weather.</li>
+        <li>Stay with your travel group.</li>
+
+
+    </ul>
+    <h3>
+        Things to remember
+    </h3>
+    <ul>
+        <li>Carry enough cash.</li>
+        <li>Keep your phone charged.</li>
+        <li>Respect local culture.</li>
+        <li>Keep the environment clean.</li>
+
+    </ul>
+    <h2 id=paki>
+        Explore Pakistan
+    </h2>
+    <p>
+        Watch this travel video to discover the breathtaking landscapes, beautiful mountains, peaceful valleys, and
+        amazing destinations of Pakistan.
+    </p>
+    <video src="❤️💯.mp4" controls></video>
+    <div>
+        <video src="zz.mp4" autoplay muted controls></video>
+    </div>
+    <h2>
+        Travel Gallery
+    </h2>
+    <p>
+        Explore beautiful moments and breathtaking views from different destinations across Pakistan.
+    </p>
+    <div class="gallery">
+
+        <img src="hunza.jpg" alt="Hunza">
+        <img src="skardu.jpg" alt="Skardu">
+        <img src="swat.jpg" alt="Swat">
+        <img src="naran.jpg" alt="Naran Kaghan">
+        <img src="murree.jpg" alt="Murree">
+        <img src="fairy-meadows.jpg" alt="Fairy Meadows">
+
+    </div>
+    <h2>
+        Map / Location
+    </h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/K6e818GUOAY?si=fbQB4j1bC8gd3NpT"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <h1>
+        Contact Form
+    </h1>
+    <div id=name>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your Name">
+    </div>
+    <div id=email><label for="Email">Enter Email</label>
+        <input type="text" id="Email" name="Email" placeholder="Enter your Eamil">
+    </div>
+    <div id=phone>
+        <label for="phone number">Phone Number</label>
+        <input type="number" id="phone number" name="phone" placeholder="Enter your Number">
+    </div>
+    <h2>
+        Choose Destination
+    </h2>
+    <select name="Destination" id="Destination">
+        <option value="Naran">.Naran</option>
+        <option value="Kaghan">.Kaghan</option>
+        <option value="Murree">.Murree</option>
+        <option value="Skardu">.Skardu</option>
+        <option value="Hunza">.Hunza</option>
+    </select>
+    <h3>Messege Box </h3>
+    <textarea name="Drop your messege" id="Drop your messege" cols="55" rows="10"
+        placeholder="text here........."></textarea>
+    <button class="button">Submit</button>
+    <h4>&copy; 2026 Explore Pakistan</h4>
+    <div id="id">
+        <a href="www://Hunza.com">Vist Hunza</a>
+        <a href="www://Swat.com">Vist Sawat</a>
+        <a href="www://" Murree.com>Vist Muree</a>
+        <a href="www://naran.com">Vist Naran</a>
+    </div>
+
+
+    <p id=lov>Explore Pakistan and discover the beauty of its mountains, valleys, lakes, and peaceful destinations. Plan
+        your
+        next journey and create unforgettable travel memories.</p>
+
+</body>
+
+</html>
